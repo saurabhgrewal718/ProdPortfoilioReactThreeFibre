@@ -26,9 +26,9 @@ export function Laptop(props) {
     tl.current
     //.to(robot.current.rotation, {y:}, 2)
     //2.5,-1.5,-2
-    .to(group.current.rotation, {y:-0.5}, 1.8)
-    .to(group.current.position, {x:1,y:-2.7,z:2}, 1.8)
-    .to(group.current.scale, {x: 3,y:3,z:3}, 1.8)
+    .to(group.current.rotation, {y:-0.3}, 1.8)
+    .to(group.current.position, {x:0.8,y:-2.7,z:2}, 1.8)
+    .to(group.current.scale, {x: 3.3,y:3.3,z:3.3}, 1.8)
 
     .to(group.current.rotation, {y: 1}, 12)   
     .to(group.current.position, {x: -1}, 12)

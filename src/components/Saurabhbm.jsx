@@ -36,14 +36,17 @@ export function Saubm(props) {
    
     .to(robot.current.position, {x: -2,y:-18}, 11)
   
-    .to(robot.current.position, {x: -2,y:-16}, 13)
-    .to(robot.current.position, {x: -2,y:-3}, 14)
+    .to(robot.current.position, {x: 2,y:-3}, 13)
+    .to(robot.current.rotation, {y:-1,x:-0.1}, 14)
+    .to(robot.current.scale, {x:0.5,y:0.5,z:0.5}, 14)  
     // .to(robot.current.position, {x: -2,y:-3}, 15)
     // .to(robot.current.position, {x: -2,y:-3}, 16)
     // .to(robot.current.position, {x: -2,y:-3}, 17)
     // .to(robot.current.position, {x: -2,y:-3}, 18)
-    // .to(robot.current.position, {x: -2,y:-3}, 19)    
-    .to(robot.current.position, {x: -2,y:-3}, 20)   
+    // .to(robot.current.position, {x: -2,y:-3}, 19)  
+    .to(robot.current.scale, {x:1,y:1,z:1}, 20)  
+    .to(robot.current.rotation, {y:1}, 20)
+    .to(robot.current.position, {x: -2,y:-6.4}, 20)   
 
   },[])
 
