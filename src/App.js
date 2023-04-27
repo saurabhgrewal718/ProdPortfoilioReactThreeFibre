@@ -56,7 +56,7 @@ function App() {
   useEffect(()=> {
     const target = baffle('.title')
     target.set({
-      characters: '░S░A░U░R░A░B░H░G░R░E░W░A░L░',
+      characters: '░S░A░U░R░A░B░H░',
       speed: 100
     })
     target.start()
