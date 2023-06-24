@@ -12,8 +12,7 @@ export function Saubm(props) {
   const robot = useRef()
   const { nodes, materials, animations } = useGLTF('/saurabhbm.glb')
   const { ref,actions, names } = useAnimations(animations)
-  const [hovered, setHovered] = useState(false)
-  const [index, setIndex] = useState(4)
+  const [index] = useState(4)
 
   const scroll = useScroll()
   const tl = useRef()

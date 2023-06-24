@@ -4,14 +4,13 @@ Command: npx gltfjsx@6.1.4 comp.glb --transform
 */
 
 import React, { useRef,useLayoutEffect } from 'react'
-import { useGLTF, useAnimations,useScroll } from '@react-three/drei'
+import { useGLTF,useScroll } from '@react-three/drei'
 import {useFrame} from '@react-three/fiber'
 import gsap from 'gsap'
 
 export function Comp(props) {
   const group = useRef()
-  const { nodes, materials, animations } = useGLTF('/comp.glb')
-  const { actions } = useAnimations(animations, group)
+  const { nodes, materials } = useGLTF('/comp.glb')
 
   const scroll = useScroll()
   const tl = useRef()

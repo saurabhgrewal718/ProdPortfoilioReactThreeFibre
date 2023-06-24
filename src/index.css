@@ -35,6 +35,22 @@ h1 {
   background-size: 100% 100% !important;
 }
 
+.btn {
+  background-color: black;
+  border: 2px solid white;
+  margin-right:20px;
+  margin-top:0px;
+  background-color: white;
+  color: black;
+  padding: 10px 20px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.btn:hover {
+  color: white;
+  background-color: black;
+}
+
 h2 {
   background: -webkit-linear-gradient(0deg,#cdcbca, aliceblue,#cdcbca,#2a3a3f);
   background-size: auto;
@@ -68,6 +84,7 @@ button {
   width: 100%;
   padding: 0 40px;
 }
+
 
 .annotation {
   cursor: pointer;

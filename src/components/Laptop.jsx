@@ -4,13 +4,13 @@ Command: npx gltfjsx@6.1.4 laptop.glb --transform
 */
 
 import React, { useRef,useLayoutEffect } from 'react'
-import { useGLTF, useAnimations,useScroll } from '@react-three/drei'
+import { useGLTF,useScroll } from '@react-three/drei'
 import {useFrame} from '@react-three/fiber'
 import gsap from 'gsap'
 
 export function Laptop(props) {
   const group = useRef()
-  const { nodes, materials, animations } = useGLTF('/laptop.glb')
+  const { nodes, materials } = useGLTF('/laptop.glb')
  // const { actions } = useAnimations(animations, group)
 
   const scroll = useScroll()
@@ -26,9 +26,9 @@ export function Laptop(props) {
     tl.current
     //.to(robot.current.rotation, {y:}, 2)
     //2.5,-1.5,-2
-    .to(group.current.rotation, {y:-0.3}, 1.8)
-    .to(group.current.position, {x:0.8,y:-2.7,z:2}, 1.8)
-    .to(group.current.scale, {x: 3.3,y:3.3,z:3.3}, 1.8)
+    .to(group.current.rotation, {y:-0.4}, 1.8)
+    .to(group.current.position, {x:1.2,y:-3,z:2}, 1.8)
+    .to(group.current.scale, {x: 3,y:3,z:3}, 1.8)
 
     .to(group.current.rotation, {y: 1}, 12)   
     .to(group.current.position, {x: -1}, 12)

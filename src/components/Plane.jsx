@@ -4,12 +4,12 @@ Command: npx gltfjsx@6.1.4 plane.glb --transform
 */
 
 import React, { useRef } from 'react'
-import { useGLTF, useAnimations } from '@react-three/drei'
+import { useGLTF } from '@react-three/drei'
 
 export function Plane(props) {
   const group = useRef()
-  const { nodes, materials, animations } = useGLTF('/plane.glb')
-  const { actions } = useAnimations(animations, group)
+  const { nodes, materials } = useGLTF('/plane.glb')
+ 
   return (
     <group ref={group} {...props} dispose={null}>
       <group name="Scene">

@@ -5,13 +5,20 @@ Command: npx gltfjsx@6.1.4 headphone.glb --transform
 
 import React, { useRef } from 'react'
 import { useGLTF, useAnimations } from '@react-three/drei'
+import { useFrame, useThree,useLoader } from '@react-three/fiber'
+import * as THREE from 'three'
 
 export function Headphone(props) {
   const group = useRef()
   const { nodes, materials, animations } = useGLTF('/headphone.glb')
   const { actions } = useAnimations(animations, group)
+  const bump = useLoader(THREE.TextureLoader, "https://blenderartists.org/uploads/default/original/4X/4/e/3/4e31caa0f5acc386e4a504eab2269ebdb47f0307.jpg");
+  bump.wrapS = THREE.RepeatWrapping;
+  bump.wrapT = THREE.RepeatWrapping;
+  bump.repeat.set(1, 1);
   return (
     <group ref={group} {...props} dispose={null}>
+      <mesh>
       <group name="Scene">
         <group name="Sketchfab_model" position={[0, 0, -2.82]} rotation={[-Math.PI / 2, 0, 0]}>
           <group name="Headphonesobjcleanermaterialmergergles">
@@ -26,7 +33,10 @@ export function Headphone(props) {
             <mesh name="Object_9" geometry={nodes.Object_9.geometry} material={materials['Material.009']} />
           </group>
         </group>
+        <meshStandardMaterial color="hotpink" />
       </group>
+      </mesh>
+      
     </group>
   )
 }
