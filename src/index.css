@@ -46,6 +46,21 @@ h1 {
   transition: background-color 0.2s, color 0.2s;
 }
 
+.btn-green{
+  background-color: greenyellow;
+  border: 2px solid white;
+  margin-right:20px;
+  margin-top:0px;
+  background-color: greenyellow;
+  color: black;
+  padding: 10px 20px;
+  transition: background-color 0.2s, color 0.2s;
+}
+.btn-green:hover {
+  color: white;
+  background-color: black;
+}
+
 .btn:hover {
   color: white;
   background-color: black;

@@ -15,7 +15,7 @@ export function Robot(props) {
   const { ref,actions, names } = useAnimations(animations)
   const [hovered, setHovered] = useState(false)
   const [index, setIndex] = useState(3)
-  console.log(actions);
+  // console.log(actions);
 
  
   const scroll = useScroll()

@@ -197,7 +197,6 @@ function App() {
     setPlaying(!playing);
   };
 
-
   return (
     <Suspense fallback={null}>
     <>
@@ -218,7 +217,7 @@ function App() {
     <Suspense fallback={null}>
         <Saubm scale={0.35} rotation-x={-0.2} rotation-y={0.5} position={[0, -20, 0]}/>
     </Suspense>
-      <mesh position={[-7.5,-1,-1.5]}  scale={0.3} onPointerOver={() => set(true)} onPointerOut={() => set(false)}
+      <mesh position={[-6.5,-1,-1.5]}  scale={0.3} onPointerOver={() => set(true)} onPointerOut={() => set(false)}
             // eslint-disable-next-line no-sequences
             onClick={(e) => (e.stopPropagation(),window.open(
               "https://github.com/saurabhgrewal718", "_blank"))}
@@ -226,7 +225,7 @@ function App() {
         <MySphere img='./gitt.png'>
         </MySphere> 
       </mesh>
-      <mesh position={[-7.5,-2,-1.15]} scale={0.3} onPointerOver={() => set(true)} onPointerOut={() => set(false)}
+      <mesh position={[-6.5,-2,-1.15]} scale={0.3} onPointerOver={() => set(true)} onPointerOut={() => set(false)}
             // eslint-disable-next-line no-sequences
             onClick={(e) => (e.stopPropagation(),   window.open(
               "https://www.linkedin.com/in/saurabhgrewal/", "_blank"))}
@@ -234,7 +233,7 @@ function App() {
        <MySphere img='https://cdn2.iconfinder.com/data/icons/popular-social-media-flat/48/Popular_Social_Media-22-512.png'>
         </MySphere> 
       </mesh>
-      <mesh  position={[-6.9,-2.7,-0.5]} scale={0.3} onPointerOver={() => set(true)} onPointerOut={() => set(false)}
+      <mesh  position={[-5.9,-2.7,-0.5]} scale={0.3} onPointerOver={() => set(true)} onPointerOut={() => set(false)}
             // eslint-disable-next-line no-sequences
             onClick={(e) => (e.stopPropagation(),   window.open(
               "mailto:saurabhgrewal718@gmail.com?subject=Important!&body=Hi Saurabh...", "_blank"))}
@@ -246,6 +245,8 @@ function App() {
            <div style={{ color: '#cdcbca',position: 'fixed',left: '2%',top:'5%', fontSize: '30px', transform: `translate(0%,0%)` }}><img src='./sau.jpeg' style={{width:'80px',height:'80px',borderRadius:'50%',marginTop:'15px' }} alt="Saurabh Grewal"/></div>
            <div style={{ color: '#cdcbca',position: 'fixed',right: '0%',top:'5vh', transform: `translate(0%,0%)` }}>
            <button className='btn' onClick={togglePlay}> {playing ? 'Pause Sound' : 'Play Sound'}</button>  
+           <button className='btn-green' onClick={(e) => (e.stopPropagation(),window.open(
+    "https://drive.google.com/file/d/1lFPdfRFVwV3lp51Nq5HFKyDc8xV3Zn2e/view", "_blank"))}> Resume </button>  
            </div>
               <lottie-player  style={{width:'90px',height:'90px',position: 'absolute', top: `60vh`,left: '50%'}}  src="https://assets10.lottiefiles.com/packages/lf20_euvytx7n.json" background="transparent" speed="1" loop autoplay></lottie-player>
               <lottie-player  style={{width:'90px',height:'90px',position: 'absolute', top: `115vh`,left: '50%'}}  src="https://assets1.lottiefiles.com/packages/lf20_o87tttfh.json" background="transparent" speed="0.5" loop autoplay></lottie-player>
@@ -253,13 +254,13 @@ function App() {
               <h2 style={{ color: '#cdcbca',position: 'absolute', top: `95vh`,left: '50%', fontSize: '30px', transform: `translate(-50%,-50%)` }}>FULL STACK DEVELOPER</h2>
               <div style={{display:'flex',alignItems:'center' }}>
               </div>
-              <p style={{ color: '#cdcbca',position: 'absolute', top: `150vh`,left: '50%', fontSize: '20px', textAlign:'center',transform: `translate(-50%,-50%)` }}>I'm a fullstack developer who's passionate about crafting beautiful interfaces and webapps that make people go "wow"! I've got skills in Angular, Spring Boot, and Node.js, and I've already deployed three seriously impressive production-grade apps. Check out my Github for more juicy details! Let's create something that'll make your users say "holy cow, that's awesome"!</p>                
+              <p style={{ color: '#cdcbca',position: 'absolute', top: `150vh`,left: '50%', fontSize: '20px', textAlign:'center',transform: `translate(-50%,-50%)` }}>I'm a fullstack developer(backend heavy these days) who's passionate about crafting beautiful interfaces and webapps that make people go "wow"! I've got skills in AWS, Spring Boot, and Node.js, and I've already deployed three seriously impressive production-grade apps. Check out my Github for more juicy details! Let's create something that'll make your users say "holy cow, that's awesome"!</p>                
              
               <h2 style={{ position: 'absolute', top: '230vh', left: '50%', transform: `translate(-50%,-50%)` }}>Tools and Frameworks</h2>    
-              <p style={{ color: '#cdcbca',position: 'absolute', top: `250vh`,left: '50%', fontSize: '20px',textAlign:'center', transform: `translate(-50%,-50%)` }}>I gained hands on experience in JavaScript, Angular, Node.js, Firebase, HTML, CSS, MySQL, GitHub, Python, Java, Springboot, MongoDB, AWS EC2, and Flutter. From front-end design and back-end development to database management and cloud computing</p>
+              <p style={{ color: '#cdcbca',position: 'absolute', top: `250vh`,left: '50%', fontSize: '20px',textAlign:'center', transform: `translate(-50%,-50%)` }}>I gained hands on experience in TypeScript, Lambda, SQS, DynamoDB, Redis, JavaScript, Angular, Node.js, Firebase, MySQL, GitHub, Python, Java, Springboot, MongoDB, AWS EC2, and Flutter. From front-end design and back-end development to database management and cloud computing</p>
       
               <h2 style={{ position: 'absolute', top: '400vh', left: '50%', transform: `translate(-50%,-50%)` }}>Experience</h2>    
-              <p style={{ color: '#cdcbca',position: 'absolute', top: `420vh`,left: '50%', fontSize: '20px',textAlign:'center', transform: `translate(-50%,-50%)` }}>I have Been working for 2 years now and so far i have worked with the following companies, its been a wonderful journey so far :)</p>
+              <p style={{ color: '#cdcbca',position: 'absolute', top: `420vh`,left: '50%', fontSize: '20px',textAlign:'center', transform: `translate(-50%,-50%)` }}>I have Been working for 3 years now and so far i have worked with the following companies, its been a wonderful journey so far :)</p>
           
               <h2 style={{ position: 'absolute', top: '665vh', left: '50%', transform: `translate(-50%,-50%)` }}>My Projects</h2>   
 
@@ -273,7 +274,7 @@ function App() {
                   <button style={{ margin:'10px' }} onClick={(e) => (e.stopPropagation(),window.open(
                   "https://www.linkedin.com/in/saurabhgrewal/", "_blank"))}>Linkedin</button>
                   <button style={{ margin:'10px' }} onClick={(e) => (e.stopPropagation(),window.open(
-                  "https://drive.google.com/file/d/148QMhEcmsadiTGYWrp6au_wk047QRVCL/view", "_blank"))}>Resume</button>
+                  "https://drive.google.com/file/d/1lFPdfRFVwV3lp51Nq5HFKyDc8xV3Zn2e/view", "_blank"))}>Resume</button>
                 </div>
               </div>                 
         </Scroll>
@@ -465,13 +466,16 @@ function App() {
         </Float>
       </Scroll>
       <Scroll>
-        <mesh position={[1.2, -12, 0]} rotation-y={0.1} rotation-x={-0.2}>
+      <mesh position={[1.2, -12, 0]} rotation-y={0.1} rotation-x={-0.2}>
+             <MyProject img={'./sportsbaazi.png'}/>
+          </mesh>
+        <mesh position={[1.2, -13.5, 0]} rotation-y={0.1} rotation-x={-0.2}>
              <MyProject img={'./fin.png'}/>
           </mesh>
-          <mesh  position={[1.1, -14, 0]} rotation-y={0.1} rotation-x={-0.2}>
+          <mesh  position={[1.1, -15, 0]} rotation-y={0.1} rotation-x={-0.2}>
             <MyProject img={'./info.png'}/>
         </mesh>
-        <mesh  position={[1.2, -16, 0]} rotation-y={0.1} rotation-x={-0.2}>
+        <mesh  position={[1.2, -16.5, 0]} rotation-y={0.1} rotation-x={-0.2}>
             <MyProject img={'./moh.png'}/>
         </mesh>
       </Scroll>
@@ -481,13 +485,16 @@ function App() {
       </Scroll>
       <Scroll>
         <Suspense fallback={null}>
+        <mesh position={[0, -18, 0.7]} rotation-y={1} rotation-x={-0.1}>
+             <MyProject img={'./Delhi.jpg'}/>
+          </mesh>
           <mesh position={[0, -19, 1]} rotation-y={1} rotation-x={-0.1}>
              <MyProject img={'./caffto.png'}/>
           </mesh>
-          <mesh  position={[0, -20.5, 1]} rotation-y={1} rotation-x={-0.1}>
+          <mesh  position={[0, -20, 1]} rotation-y={1} rotation-x={-0.1}>
             <MyProject img={'./finan1.png'}/>
         </mesh>
-        <mesh position={[0, -22, 1]} rotation-y={1} rotation-x={-0.1}>
+        <mesh position={[0, -21, 1]} rotation-y={1} rotation-x={-0.1}>
             <MyProject img={'./fin2.jpeg'}/>
         </mesh>
         </Suspense>
