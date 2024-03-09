@@ -485,16 +485,16 @@ function App() {
       </Scroll>
       <Scroll>
         <Suspense fallback={null}>
-        <mesh position={[0, -18, 0.7]} rotation-y={1} rotation-x={-0.1}>
+        <mesh position={[0, -18.5, 0.6]} rotation-y={1} rotation-x={-0.1}>
              <MyProject img={'./Delhi.jpg'}/>
           </mesh>
-          <mesh position={[0, -19, 1]} rotation-y={1} rotation-x={-0.1}>
+          <mesh position={[0, -20, 1]} rotation-y={1} rotation-x={-0.1}>
              <MyProject img={'./caffto.png'}/>
           </mesh>
-          <mesh  position={[0, -20, 1]} rotation-y={1} rotation-x={-0.1}>
+          <mesh  position={[0, -21.5, 1]} rotation-y={1} rotation-x={-0.1}>
             <MyProject img={'./finan1.png'}/>
         </mesh>
-        <mesh position={[0, -21, 1]} rotation-y={1} rotation-x={-0.1}>
+        <mesh position={[0, -23, 1]} rotation-y={1} rotation-x={-0.1}>
             <MyProject img={'./fin2.jpeg'}/>
         </mesh>
         </Suspense>
