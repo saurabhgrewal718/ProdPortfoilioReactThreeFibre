@@ -11,6 +11,49 @@
         "source": "**",
         "destination": "/index.html"
       }
+    ],
+    "headers": [
+      {
+        "source": "**/*.@(glb|gltf|wasm)",
+        "headers": [
+          { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" },
+          { "key": "Content-Encoding", "value": "identity" }
+        ]
+      },
+      {
+        "source": "**/*.@(js|mjs|css)",
+        "headers": [
+          { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+        ]
+      },
+      {
+        "source": "**/*.@(webp|png|jpg|jpeg|svg|ico|gif)",
+        "headers": [
+          { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+        ]
+      },
+      {
+        "source": "**/*.@(mp3|mp4|ogg|wav)",
+        "headers": [
+          { "key": "Cache-Control", "value": "public, max-age=2592000" }
+        ]
+      },
+      {
+        "source": "**/*.html",
+        "headers": [
+          { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" },
+          { "key": "X-Content-Type-Options", "value": "nosniff" },
+          { "key": "X-Frame-Options", "value": "DENY" },
+          { "key": "X-XSS-Protection", "value": "1; mode=block" },
+          { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
+        ]
+      },
+      {
+        "source": "**",
+        "headers": [
+          { "key": "X-Content-Type-Options", "value": "nosniff" }
+        ]
+      }
     ]
   }
 }

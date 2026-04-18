@@ -7,16 +7,10 @@ import { ScrollControls, Scroll, Environment, Lightformer, PositionalAudio, Spar
 import baffle from 'baffle'
 import dynamic from "next/dynamic"
 
-// Wrap EVERY component from src/components/ with ssr: false and handle named exports
+// Only load components that are actually rendered — unused ones removed to cut bundle size
 const Backgr = dynamic(() => import("../src/components/Backgr").then(mod => mod.Backgr), { ssr: false })
-const Bag = dynamic(() => import("../src/components/Bag").then(mod => mod.Bag), { ssr: false })
 const Comp = dynamic(() => import("../src/components/Comp").then(mod => mod.Comp), { ssr: false })
-const Head = dynamic(() => import("../src/components/Head").then(mod => mod.Head), { ssr: false })
-const Headphone = dynamic(() => import("../src/components/Headphone").then(mod => mod.Headphone), { ssr: false })
-const Key = dynamic(() => import("../src/components/Key").then(mod => mod.Key), { ssr: false })
 const Laptop = dynamic(() => import("../src/components/Laptop").then(mod => mod.Laptop), { ssr: false })
-const Notebook = dynamic(() => import("../src/components/Notebook").then(mod => mod.Notebook), { ssr: false })
-const Plane = dynamic(() => import("../src/components/Plane").then(mod => mod.Plane), { ssr: false })
 const Robot = dynamic(() => import("../src/components/Saura").then(mod => mod.Robot), { ssr: false })
 const Saubm = dynamic(() => import("../src/components/Saurabhbm").then(mod => mod.Saubm), { ssr: false })
 const Tree = dynamic(() => import("../src/components/Tree").then(mod => mod.Tree), { ssr: false })
@@ -139,7 +133,7 @@ function ProjectScene({ playing, togglePlay }) {
 
         <Scroll html style={{ width: '100%' }}>
           <div style={{ color: '#cdcbca', position: 'fixed', left: '2%', top: '5%', fontSize: '30px' }}>
-            <img src='./sau.jpeg' style={{ width: '80px', height: '80px', borderRadius: '50%', marginTop: '15px' }} alt="Saurabh Grewal" />
+            <img src='./sau.jpeg' style={{ width: '80px', height: '80px', borderRadius: '50%', marginTop: '15px' }} alt="Saurabh Grewal" width="80" height="80" />
           </div>
           <div style={{ color: '#cdcbca', position: 'fixed', right: '0%', top: '5vh' }}>
             <button className='btn' onClick={togglePlay}> {playing ? 'Pause Sound' : 'Play Sound'}</button>
@@ -221,16 +215,16 @@ function ProjectScene({ playing, togglePlay }) {
 
         <Scroll>
           <mesh position={[1.2, -11.5, 0]} rotation-y={0.1} rotation-x={-0.2}>
-            <MyProject img='./pw.png' />
+            <MyProject img='./pw.webp' />
           </mesh>
           <mesh position={[1.2, -13, 0]} rotation-y={0.1} rotation-x={-0.2}>
-            <MyProject img='./sportsbaazi.png' />
+            <MyProject img='./sportsbaazi.webp' />
           </mesh>
           <mesh position={[1.2, -14.5, 0]} rotation-y={0.1} rotation-x={-0.2}>
-            <MyProject img='./fin.png' />
+            <MyProject img='./fin.webp' />
           </mesh>
           <mesh position={[1.1, -16, 0]} rotation-y={0.1} rotation-x={-0.2}>
-            <MyProject img='./info.png' />
+            <MyProject img='./info.webp' />
           </mesh>
         </Scroll>
 
@@ -240,10 +234,10 @@ function ProjectScene({ playing, togglePlay }) {
 
         <Scroll>
           <Suspense fallback={null}>
-            <mesh position={[0, -18.5, 0.6]} rotation-y={1} rotation-x={-0.1}><MyProject img='./Delhi.jpg' /></mesh>
-            <mesh position={[0, -20, 1]} rotation-y={1} rotation-x={-0.1}><MyProject img='./caffto.png' /></mesh>
-            <mesh position={[0, -21.5, 1]} rotation-y={1} rotation-x={-0.1}><MyProject img='./finan1.png' /></mesh>
-            <mesh position={[0, -23, 1]} rotation-y={1} rotation-x={-0.1}><MyProject img='./fin2.jpeg' /></mesh>
+            <mesh position={[0, -18.5, 0.6]} rotation-y={1} rotation-x={-0.1}><MyProject img='./Delhi.webp' /></mesh>
+            <mesh position={[0, -20, 1]} rotation-y={1} rotation-x={-0.1}><MyProject img='./caffto.webp' /></mesh>
+            <mesh position={[0, -21.5, 1]} rotation-y={1} rotation-x={-0.1}><MyProject img='./finan1.webp' /></mesh>
+            <mesh position={[0, -23, 1]} rotation-y={1} rotation-x={-0.1}><MyProject img='./fin2.webp' /></mesh>
           </Suspense>
         </Scroll>
       </ScrollControls>
